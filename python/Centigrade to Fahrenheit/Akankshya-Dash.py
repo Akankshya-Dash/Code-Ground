@@ -1,5 +1,5 @@
 # Temprature in celsius degree 
-celsius = 40
+celsius = input("Enter temperature in celcius: ") 
 
 # Converting the temprature to 
 # fehrenheit using the above 
