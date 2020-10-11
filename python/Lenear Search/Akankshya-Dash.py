@@ -1,20 +1,18 @@
-# Searching an element in a list/array in python 
-# can be simply done using \'in\' operator 
-# Example: 
-# if x in arr: 
-# print arr.index(x) 
-
-# If you want to implement Linear Search in python 
-
-# Linearly search x in arr[] 
-# If x is present then return its location 
-# else return -1 
-
-def search(arr, x): 
-
-	for i in range(len(arr)): 
-
-		if arr[i] == x: 
-			return i 
-
-	return -1
+def linear_search(alist, key):
+    """Return index of key in alist. Return -1 if key not present."""
+    for i in range(len(alist)):
+        if alist[i] == key:
+            return i
+    return -1
+ 
+ 
+alist = input('Enter the list of numbers: ')
+alist = alist.split()
+alist = [int(x) for x in alist]
+key = int(input('The number to search for: '))
+ 
+index = linear_search(alist, key)
+if index < 0:
+    print('{} was not found.'.format(key))
+else:
+    print('{} was found at index {}.'.format(key, index))
